@@ -1,4 +1,4 @@
-import { getRandomQuote } from '../../apiCalls/apiCalls';
+import { getRandomQuote, getRandomMeme } from '../../apiCalls/apiCalls';
 import React, { useEffect, useState } from 'react'
 import moment from 'moment';
 import './QuoteContainer.css'
@@ -6,12 +6,15 @@ import './QuoteContainer.css'
 const QuoteContainer = () => {
 
     const [quote, setQuote] = useState({});
-    const [isLoading, setIsLoading] = useState(true) ;
+    const [memeURL, setMemeURL] = useState('')
+
 
     useEffect(async () => {
         const getQuote = await getRandomQuote()
+        const blob = await getRandomMeme()
+        const getMeme = URL.createObjectURL(blob)
         setQuote(getQuote)
-        setIsLoading(false)
+        setMemeURL(getMeme)
       }, []);
 
     const displayTags = () => {
@@ -26,9 +29,9 @@ const QuoteContainer = () => {
             });
         }
     }
-
     return (
         <div className='quote-container'>
+        {memeURL ? <img src={memeURL}  className='meme' /> : <div className="loader"></div>}
             <div className='inner-quote-container'>
 
                 {quote._embedded ? <h1 className="title">Random {quote._embedded.author[0].name} quote</h1>: 
