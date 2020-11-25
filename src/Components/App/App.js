@@ -45,11 +45,10 @@ export const App = () => {
       <div className="App">
          <h1 className="title">Using Hooks for the fisrt time</h1>
 
-         <Clock />
-
-         <Form tags={tags}/>
-        
+        <Clock />
         <QuoteContainer/>
+        <Form tags={tags}/>
+        
 
       </div>
     );
