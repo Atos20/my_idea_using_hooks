@@ -1,0 +1,64 @@
+.form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.all-tags{
+    text-decoration: none;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, .5fr);
+    grid-auto-flow: row;
+    margin: 0%;
+    padding: 0%;
+
+}
+
+.tag{
+    background-color: orange;
+    font-family: 'Montserrat Alternates', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tag:hover{
+    color: orange;
+    background-color: beige;
+    font-weight: 600;
+    border-bottom: 1px solid black;
+}
+
+.input{
+    width: 40%;
+    font-family: 'Montserrat Alternates', sans-serif;
+    margin: 4%;
+    height: 5vh;
+    font-size: 1.2em;
+}
+
+.search-bar{
+    border: none;
+    border-bottom: 2px solid black;
+    outline: none;
+}
+
+.button{
+    outline: none;
+    border: none;
+    border-radius: 2em;
+    font-family: Montserrat;
+    background-color: orange;
+}
+
+.button:active{
+    margin-top: 1px;
+    transition: all 0.2s;
+}
+
+.button:hover{
+    background-color: rgb(255, 188, 63);
+}
+

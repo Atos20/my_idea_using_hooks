@@ -1,0 +1,36 @@
+.quote-container{
+    background-color: beige;
+    height: 50vh;
+
+}
+
+.inner-quote-container{
+    margin: 5%;
+    background-color: gold;
+    height: 100%;
+}
+
+.data-container{
+    background-color: beige;
+    height: 80%;
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.value{
+    margin: 5%;
+}
+
+.tags-container, .date-container{
+    display: inline-flex;
+    align-items: flex-end;
+    width: 100%;
+    justify-content: center;
+}
+
+.subtitle, .tag{
+    margin: 4%;
+}
