@@ -26,19 +26,17 @@ export const Form = (props) =>  {
         })
       }
     }
-    
+
     const getTagName = (event) =>{
       setValue(event.target.id)
     }
 
-
     return (
         <form className='form-container'>
-        <h1 className="people">People Trump Talks About</h1>
+        <h1 className="people">This is what Trump talks about</h1>
           <ul className="all-tags">
             {displayAllTags()}
           </ul>
-
           <input
             className='input search-bar'
             placeholder='search'
